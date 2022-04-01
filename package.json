@@ -1,6 +1,8 @@
 {
-  "version": "0.1.0",
-  "license": "MIT",
+  "name": "tailui",
+  "description": "React component library based on Tailwind CSS",
+  "version": "0.0.1",
+  "license": "ISC",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
@@ -11,59 +13,38 @@
     "node": ">=10"
   },
   "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
-    "test": "tsdx test --passWithNoTests",
-    "lint": "tsdx lint",
-    "prepare": "tsdx build",
-    "size": "size-limit",
-    "analyze": "size-limit --why",
+    "build-tailwind": "NODE_ENV=production npx tailwindcss -o ./dist/tailwind.css --minify",
+    "build": "tsdx build && yarn build-tailwind",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test": "tsdx test --passWithNoTests",
+    "format": "prettier --write .",
+    "prepare": "tsdx build",
+    "start": "tsdx watch",
+    "lint": "tsdx lint"
   },
   "peerDependencies": {
     "react": ">=16"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
-  },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
-  },
-  "name": "tailui",
   "author": "Albin Groen",
   "module": "dist/tailui.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/tailui.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/tailui.esm.js",
-      "limit": "10 KB"
-    }
-  ],
   "devDependencies": {
     "@babel/core": "^7.17.8",
-    "@size-limit/preset-small-lib": "^7.0.8",
     "@storybook/addon-essentials": "^6.4.20",
     "@storybook/addon-info": "^5.3.21",
     "@storybook/addon-links": "^6.4.20",
+    "@storybook/addon-postcss": "^2.0.0",
     "@storybook/addons": "^6.4.20",
     "@storybook/react": "^6.4.20",
     "@types/react": "^17.0.43",
     "@types/react-dom": "^17.0.14",
+    "autoprefixer": "^10.4.4",
     "babel-loader": "^8.2.4",
-    "husky": "^7.0.4",
+    "postcss": "^8.4.12",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-is": "^18.0.0",
-    "size-limit": "^7.0.8",
+    "tailwindcss": "^3.0.23",
     "tsdx": "^0.14.1",
     "tslib": "^2.3.1",
     "typescript": "^4.6.3"

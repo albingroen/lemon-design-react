@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build-tailwind": "NODE_ENV=production npx tailwindcss -o ./dist/tailwind.css --minify",
-    "build": "tsdx build && yarn build-tailwind",
+    "build": "tsdx build && npm run build-tailwind",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "format": "prettier --write .",

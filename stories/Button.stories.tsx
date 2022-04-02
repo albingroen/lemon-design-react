@@ -36,6 +36,7 @@ WithLink.args = {
   iconPosition: "right",
   variant: "default",
   target: "_blank",
+  disabled: false,
   loading: false,
   shape: "square",
   size: "default",

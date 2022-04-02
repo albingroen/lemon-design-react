@@ -38,6 +38,12 @@ import {
 
 import LinkButton, { LinkButtonProps } from "./LinkButton";
 
+import Select, {
+  SelectProps,
+  CustomSelectProps,
+  getSelectStyles,
+} from "./Select";
+
 export {
   Button,
   ButtonProps,
@@ -70,4 +76,8 @@ export {
   getCardContentStyles,
   LinkButton,
   LinkButtonProps,
+  Select,
+  SelectProps,
+  CustomSelectProps,
+  getSelectStyles,
 };

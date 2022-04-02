@@ -1,5 +1,5 @@
 import { Button, Card, CardProps, Typography } from "../src";
-import { ExternalLinkIcon, EyeOffIcon } from "@heroicons/react/solid";
+import { ExternalLinkIcon } from "@heroicons/react/solid";
 import { Meta, Story } from "@storybook/react";
 
 const meta: Meta = {
@@ -26,18 +26,15 @@ Default.args = {
       </Typography.Paragraph>
 
       <Button
-        icon={<ExternalLinkIcon className="w-4" />}
-        variant="success"
+        icon={<ExternalLinkIcon className="w-3" />}
+        variant="primary"
         className="mt-4"
+        size="small"
       >
         Upgrade now
       </Button>
     </Card.Content>
   ),
   heading: "Upgrade your plan",
-  extra: (
-    <Button icon={<EyeOffIcon className="w-3" />} size="small">
-      Don&apos;t show again
-    </Button>
-  ),
+  extra: <Button size="small">Don&apos;t show this again</Button>,
 };

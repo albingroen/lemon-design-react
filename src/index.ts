@@ -36,6 +36,8 @@ import {
   getCardContentStyles,
 } from "./Card";
 
+import LinkButton, { LinkButtonProps } from "./LinkButton";
+
 export {
   Button,
   ButtonProps,
@@ -66,4 +68,6 @@ export {
   CardContentProps,
   CustomCardContentProps,
   getCardContentStyles,
+  LinkButton,
+  LinkButtonProps,
 };

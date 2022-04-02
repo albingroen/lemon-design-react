@@ -10,11 +10,15 @@ A React component library based on Tailwind CSS
 
 Install through the package manager of your choice
 
-    npm install lemon-design-react
+```sh
+npm install lemon-design-react
+```
 
 Import the CSS file in the root of your project
 
-    import "lemon-design-react/dist/tailwind.css";
+```javascript
+import "lemon-design-react/dist/tailwind.css";
+```
 
 Start using the components
 

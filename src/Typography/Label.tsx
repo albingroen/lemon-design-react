@@ -11,7 +11,7 @@ export interface LabelProps
 
 export function getLabelStyles() {
   const LabelStyles = {
-    base: "text-gray-500 text-sm",
+    base: "block text-gray-700 text-sm",
   };
 
   return classNames(LabelStyles.base);

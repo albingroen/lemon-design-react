@@ -25,6 +25,17 @@ import Typography, {
   getLabelStyles,
 } from "./Typography";
 
+import {
+  Card,
+  CardProps,
+  CustomCardProps,
+  getCardStyles,
+  CardContent,
+  CardContentProps,
+  CustomCardContentProps,
+  getCardContentStyles,
+} from "./Card";
+
 export {
   Button,
   ButtonProps,
@@ -47,4 +58,12 @@ export {
   LabelProps,
   CustomLabelProps,
   getLabelStyles,
+  Card,
+  CardProps,
+  CustomCardProps,
+  getCardStyles,
+  CardContent,
+  CardContentProps,
+  CustomCardContentProps,
+  getCardContentStyles,
 };

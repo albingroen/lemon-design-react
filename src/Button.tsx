@@ -32,14 +32,28 @@ export function getButtonStyles({
   const buttonStyles = {
     base: "leading-none inline-flex items-center justify-center border font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 transition disabled:opacity-50 disabled:pointer-events-none",
     block: "w-full",
-    shape: {
-      square: "rounded-lg",
-      round: "rounded-full",
-    },
     size: {
-      default: "px-3.5 py-2 text-base h-[43px] space-x-2.5",
-      small: "px-2.5 py-1.5 text-sm h-[36px] space-x-2",
-      large: "px-4 py-2.5 text-lg h-[50px] space-x-3",
+      default: {
+        base: "px-3.5 text-base h-[42px] space-x-2.5",
+        shape: {
+          square: "rounded-lg",
+          round: "rounded-full",
+        },
+      },
+      small: {
+        base: "px-2.5 text-sm h-[35px] space-x-2",
+        shape: {
+          square: "rounded-md",
+          round: "rounded-full",
+        },
+      },
+      large: {
+        base: "px-4 text-lg h-[50px] space-x-3",
+        shape: {
+          square: "rounded-lg",
+          round: "rounded-full",
+        },
+      },
     },
     variant: {
       default:
@@ -56,10 +70,10 @@ export function getButtonStyles({
   };
 
   return classNames(
+    buttonStyles.size[size].shape[shape],
     buttonStyles.variant[variant],
+    buttonStyles.size[size].base,
     block && buttonStyles.block,
-    buttonStyles.shape[shape],
-    buttonStyles.size[size],
     buttonStyles.base
   );
 }

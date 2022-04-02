@@ -14,11 +14,11 @@ const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {
-  icon: <MailIcon className="w-4" />,
   children: "Basic button",
   iconPosition: "right",
   variant: "default",
   shape: "square",
   size: "default",
   block: false,
+  icon: <MailIcon className="w-4" />,
 };

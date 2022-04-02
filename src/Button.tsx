@@ -4,12 +4,14 @@ import React, {
   ReactNode,
 } from "react";
 import classNames from "./lib/classNames";
+import Spinner from "./Spinner";
 
 export interface CustomButtonProps {
   variant?: "default" | "primary" | "danger" | "warning" | "success";
   size?: "default" | "small" | "large";
   iconPosition?: "left" | "right";
   shape?: "square" | "round";
+  loading?: boolean;
   icon?: ReactNode;
   block?: boolean;
 }
@@ -28,7 +30,7 @@ export function getButtonStyles({
   block = false,
 }: CustomButtonProps) {
   const buttonStyles = {
-    base: "inline-flex items-center justify-center border font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 transition",
+    base: "leading-none inline-flex items-center justify-center border font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 transition disabled:opacity-50 disabled:pointer-events-none",
     block: "w-full",
     shape: {
       square: "rounded-lg",
@@ -41,7 +43,7 @@ export function getButtonStyles({
     },
     variant: {
       default:
-        "border-gray-300 shadow-sm text-gray-700 bg-white hover:bg-gray-50 focus:ring-gray-400",
+        "border-gray-300 shadow-sm text-gray-700 bg-white hover:bg-gray-50 focus:ring-gray-300",
       primary:
         "border-indigo-600 shadow-sm shadow-indigo-300 bg-indigo-600 text-white hover:bg-indigo-700 hover:border-indigo-700 focus:ring-indigo-400",
       danger:
@@ -66,7 +68,9 @@ export default function Button({
   iconPosition = "right",
   className,
   children,
+  disabled,
   variant,
+  loading,
   shape,
   block,
   size,
@@ -76,14 +80,19 @@ export default function Button({
   return (
     <button
       {...rest}
+      disabled={disabled || loading}
       className={classNames(
         getButtonStyles({ variant, shape, size, block, iconPosition }),
         className
       )}
     >
-      {iconPosition === "left" && icon && <span>{icon}</span>}
+      {iconPosition === "left" &&
+        (loading ? <Spinner size="small" /> : icon && <span>{icon}</span>)}
+
       <span>{children}</span>
-      {iconPosition === "right" && icon && <span>{icon}</span>}
+
+      {iconPosition === "right" &&
+        (loading ? <Spinner size="small" /> : icon && <span>{icon}</span>)}
     </button>
   );
 }

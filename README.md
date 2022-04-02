@@ -5,3 +5,23 @@ A React component library based on Tailwind CSS
 **🚧 Under development**
 
 [View progress here →](https://624787b9a7abe6004a647008-qfuuolxjlp.chromatic.com)
+
+## Usage
+
+Install through the package manager of your choice
+
+    npm install lemon-design-react
+
+Import the CSS file in the root of your project
+
+    import "lemon-design-react/dist/tailwind.css";
+
+Start using the components
+
+```javascript
+import { Button } from "lemon-design-react"
+
+...
+
+<Button>Open Mailbox</Button>
+```

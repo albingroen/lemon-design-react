@@ -1,4 +1,6 @@
-import { Button, Card, CardProps, Typography } from "../src";
+import Button from "../src/Button";
+import Typography from "../src/Typography";
+import { Card, CardProps } from "../src/Card";
 import { ExternalLinkIcon } from "@heroicons/react/solid";
 import { Meta, Story } from "@storybook/react";
 

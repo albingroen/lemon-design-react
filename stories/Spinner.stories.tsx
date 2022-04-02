@@ -1,4 +1,4 @@
-import { Spinner, SpinnerProps } from "../src";
+import Spinner, { SpinnerProps } from "../src/Spinner";
 import { Meta, Story } from "@storybook/react";
 
 const meta: Meta = {

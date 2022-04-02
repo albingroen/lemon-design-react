@@ -1,83 +1,30 @@
-import Button, {
-  ButtonProps,
-  CustomButtonProps,
-  getButtonStyles,
-} from "./Button";
-
-import Spinner, {
-  SpinnerProps,
-  CustomSpinnerProps,
-  getSpinnerStyles,
-} from "./Spinner";
-
+import Button, { getButtonStyles } from "./Button";
+import LinkButton from "./LinkButton";
+import Select, { getSelectStyles } from "./Select";
+import Spinner, { getSpinnerStyles } from "./Spinner";
 import Typography, {
-  HeadingProps,
-  CustomHeadingProps,
-  getHeadingStyles,
-  ParagraphProps,
-  CustomParagraphProps,
-  getParagraphStyles,
-  ErrorProps,
-  CustomErrorProps,
   getErrorStyles,
-  LabelProps,
-  CustomLabelProps,
+  getHeadingStyles,
   getLabelStyles,
+  getParagraphStyles,
 } from "./Typography";
-
-import {
-  Card,
-  CardProps,
-  CustomCardProps,
-  getCardStyles,
-  CardContent,
-  CardContentProps,
-  CustomCardContentProps,
-  getCardContentStyles,
-} from "./Card";
-
-import LinkButton, { LinkButtonProps } from "./LinkButton";
-
-import Select, {
-  SelectProps,
-  CustomSelectProps,
-  getSelectStyles,
-} from "./Select";
+import { Card, getCardStyles, CardContent, getCardContentStyles } from "./Card";
 
 export {
   Button,
-  ButtonProps,
-  CustomButtonProps,
-  getButtonStyles,
-  Spinner,
-  SpinnerProps,
-  CustomSpinnerProps,
-  getSpinnerStyles,
-  Typography,
-  HeadingProps,
-  CustomHeadingProps,
-  getHeadingStyles,
-  ParagraphProps,
-  CustomParagraphProps,
-  getParagraphStyles,
-  ErrorProps,
-  CustomErrorProps,
-  getErrorStyles,
-  LabelProps,
-  CustomLabelProps,
-  getLabelStyles,
   Card,
-  CardProps,
-  CustomCardProps,
-  getCardStyles,
   CardContent,
-  CardContentProps,
-  CustomCardContentProps,
-  getCardContentStyles,
   LinkButton,
-  LinkButtonProps,
   Select,
-  SelectProps,
-  CustomSelectProps,
+  Spinner,
+  Typography,
+  getButtonStyles,
+  getCardContentStyles,
+  getCardStyles,
+  getErrorStyles,
+  getHeadingStyles,
+  getLabelStyles,
+  getParagraphStyles,
   getSelectStyles,
+  getSpinnerStyles,
 };

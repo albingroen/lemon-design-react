@@ -1,4 +1,4 @@
-import { Select, SelectProps } from "../src";
+import Select, { SelectProps } from "../src/Select";
 import { Meta, Story } from "@storybook/react";
 
 const meta: Meta = {

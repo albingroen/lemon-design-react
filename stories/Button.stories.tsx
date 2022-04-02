@@ -1,4 +1,5 @@
-import { Button, ButtonProps, LinkButton, LinkButtonProps } from "../src";
+import Button, { ButtonProps } from "../src/Button";
+import LinkButton, { LinkButtonProps } from "../src/LinkButton";
 import { ExternalLinkIcon, MailIcon } from "@heroicons/react/solid";
 import { Meta, Story } from "@storybook/react";
 

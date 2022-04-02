@@ -1,10 +1,9 @@
-import {
-  Typography,
+import Typography, {
   HeadingProps,
   ParagraphProps,
   ErrorProps,
   LabelProps,
-} from "../src";
+} from "../src/Typography";
 import { Meta, Story } from "@storybook/react";
 
 const meta: Meta = {

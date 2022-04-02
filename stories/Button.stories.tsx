@@ -17,6 +17,7 @@ Default.args = {
   children: "Basic button",
   iconPosition: "right",
   variant: "default",
+  loading: false,
   shape: "square",
   size: "default",
   block: false,

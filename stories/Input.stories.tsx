@@ -13,8 +13,10 @@ export const Default = Template.bind({});
 
 Default.args = {
   placeholder: "john.doe@email.com",
-  label: "Email",
+  description: "",
   required: true,
+  label: "Email",
   block: false,
   type: "text",
+  error: "",
 };

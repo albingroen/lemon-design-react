@@ -3,7 +3,9 @@ import Typography from "./Typography";
 import classNames from "./lib/classNames";
 
 export interface CustomInputProps {
+  description?: string;
   block?: boolean;
+  error?: string;
   label?: string;
 }
 
@@ -24,22 +26,41 @@ export function getInputStyles({ block }: CustomInputProps) {
 }
 
 export default function Input({
+  description,
   className,
+  error,
   block,
   label,
   ...rest
 }: InputProps) {
   return (
-    <div className="space-y-1">
+    <div>
       {label && (
-        <Typography.Label required={rest.required} id={rest.id}>
+        <Typography.Label
+          required={rest.required}
+          className="mb-1"
+          id={rest.id}
+        >
           {label}
         </Typography.Label>
       )}
+
       <input
         {...rest}
         className={classNames(getInputStyles({ label, block }), className)}
       />
+
+      {error && (
+        <Typography.Error className="!text-sm mt-2 block">
+          {error}
+        </Typography.Error>
+      )}
+
+      {description && (
+        <Typography.Paragraph className="!text-sm mt-2 block" dim>
+          {description}
+        </Typography.Paragraph>
+      )}
     </div>
   );
 }

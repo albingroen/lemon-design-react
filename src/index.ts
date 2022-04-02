@@ -1,4 +1,5 @@
 import Button, { getButtonStyles } from "./Button";
+import Input, { getInputStyles } from "./Input";
 import LinkButton from "./LinkButton";
 import Select, { getSelectStyles } from "./Select";
 import Spinner, { getSpinnerStyles } from "./Spinner";
@@ -9,7 +10,6 @@ import Typography, {
   getParagraphStyles,
 } from "./Typography";
 import { Card, getCardStyles, CardContent, getCardContentStyles } from "./Card";
-import Input, { getInputStyles } from "./Input";
 
 export {
   Button,

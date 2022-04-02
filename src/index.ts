@@ -14,6 +14,15 @@ import Typography, {
   HeadingProps,
   CustomHeadingProps,
   getHeadingStyles,
+  ParagraphProps,
+  CustomParagraphProps,
+  getParagraphStyles,
+  ErrorProps,
+  CustomErrorProps,
+  getErrorStyles,
+  LabelProps,
+  CustomLabelProps,
+  getLabelStyles,
 } from "./Typography";
 
 export {
@@ -29,4 +38,13 @@ export {
   HeadingProps,
   CustomHeadingProps,
   getHeadingStyles,
+  ParagraphProps,
+  CustomParagraphProps,
+  getParagraphStyles,
+  ErrorProps,
+  CustomErrorProps,
+  getErrorStyles,
+  LabelProps,
+  CustomLabelProps,
+  getLabelStyles,
 };

@@ -38,7 +38,7 @@ export default function Checkbox({
       />
 
       {label && (
-        <Stack direction="vertical" className="!gap-0.5">
+        <Stack direction="vertical" spacing="mini">
           <Typography.Label htmlFor={rest.id}>{label}</Typography.Label>
           {description && (
             <Typography.Paragraph className="!text-xs" dim>

@@ -2,6 +2,8 @@ import React, {
   DetailedHTMLProps,
   ButtonHTMLAttributes,
   ReactNode,
+  forwardRef,
+  Ref,
 } from "react";
 import classNames from "./lib/classNames";
 import Spinner from "./Spinner";
@@ -78,22 +80,26 @@ export function getButtonStyles({
   );
 }
 
-export default function Button({
-  iconPosition = "right",
-  className,
-  children,
-  disabled,
-  variant,
-  loading,
-  shape,
-  block,
-  size,
-  icon,
-  ...rest
-}: ButtonProps) {
+function Button(
+  {
+    iconPosition = "right",
+    className,
+    children,
+    disabled,
+    variant,
+    loading,
+    shape,
+    block,
+    size,
+    icon,
+    ...rest
+  }: ButtonProps,
+  ref: Ref<HTMLButtonElement>
+) {
   return (
     <button
       {...rest}
+      ref={ref}
       disabled={disabled || loading}
       className={classNames(
         getButtonStyles({ variant, shape, size, block, iconPosition }),
@@ -110,3 +116,5 @@ export default function Button({
     </button>
   );
 }
+
+export default forwardRef(Button);

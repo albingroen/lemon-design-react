@@ -3,7 +3,9 @@ import Input, { getInputStyles } from "./Input";
 import LinkButton from "./LinkButton";
 import Select, { getSelectStyles } from "./Select";
 import Spinner, { getSpinnerStyles } from "./Spinner";
+import Stack, { getStackStyles } from "./Stack";
 import Tag, { getTagStyles } from "./Tag";
+import Tooltip from "./Tooltip";
 import Typography, {
   getErrorStyles,
   getHeadingStyles,
@@ -12,7 +14,6 @@ import Typography, {
 } from "./Typography";
 import { Avatar, getAvatarStyles } from "./Avatar";
 import { Card, getCardStyles, CardContent, getCardContentStyles } from "./Card";
-import Stack, { getStackStyles } from "./Stack";
 
 export {
   Avatar,
@@ -25,6 +26,7 @@ export {
   Spinner,
   Stack,
   Tag,
+  Tooltip,
   Typography,
   getAvatarStyles,
   getButtonStyles,

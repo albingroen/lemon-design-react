@@ -1,6 +1,8 @@
 import Button, { getButtonStyles } from "./Button";
+import Checkbox, { getCheckboxStyles } from "./Checkbox";
 import Input, { getInputStyles } from "./Input";
 import LinkButton from "./LinkButton";
+import Modal, { getModalOverlayStyles, getModalContentStyles } from "./Modal";
 import Select, { getSelectStyles } from "./Select";
 import Spinner, { getSpinnerStyles } from "./Spinner";
 import Stack, { getStackStyles } from "./Stack";
@@ -19,7 +21,6 @@ import {
   getAvatarGroupStyles,
 } from "./Avatar";
 import { Card, getCardStyles, CardContent, getCardContentStyles } from "./Card";
-import Checkbox, { getCheckboxStyles } from "./Checkbox";
 
 export {
   Avatar,
@@ -30,6 +31,7 @@ export {
   Checkbox,
   Input,
   LinkButton,
+  Modal,
   Select,
   Spinner,
   Stack,
@@ -46,6 +48,8 @@ export {
   getHeadingStyles,
   getInputStyles,
   getLabelStyles,
+  getModalContentStyles,
+  getModalOverlayStyles,
   getParagraphStyles,
   getSelectStyles,
   getSpinnerStyles,

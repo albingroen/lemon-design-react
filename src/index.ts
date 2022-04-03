@@ -12,11 +12,17 @@ import Typography, {
   getLabelStyles,
   getParagraphStyles,
 } from "./Typography";
-import { Avatar, getAvatarStyles } from "./Avatar";
+import {
+  Avatar,
+  getAvatarStyles,
+  AvatarGroup,
+  getAvatarGroupStyles,
+} from "./Avatar";
 import { Card, getCardStyles, CardContent, getCardContentStyles } from "./Card";
 
 export {
   Avatar,
+  AvatarGroup,
   Button,
   Card,
   CardContent,
@@ -28,6 +34,7 @@ export {
   Tag,
   Tooltip,
   Typography,
+  getAvatarGroupStyles,
   getAvatarStyles,
   getButtonStyles,
   getCardContentStyles,

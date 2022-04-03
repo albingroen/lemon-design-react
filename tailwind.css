@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .avatar-group .avatar-large {
+    @apply bg-white ring-white ring-4;
+  }
+
+  .avatar-group .avatar-default {
+    @apply bg-white ring-white ring-2;
+  }
+
+  .avatar-group .avatar-small {
+    @apply bg-white ring-white ring-1;
+  }
+}

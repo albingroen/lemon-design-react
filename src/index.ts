@@ -19,6 +19,7 @@ import {
   getAvatarGroupStyles,
 } from "./Avatar";
 import { Card, getCardStyles, CardContent, getCardContentStyles } from "./Card";
+import Checkbox, { getCheckboxStyles } from "./Checkbox";
 
 export {
   Avatar,
@@ -26,6 +27,7 @@ export {
   Button,
   Card,
   CardContent,
+  Checkbox,
   Input,
   LinkButton,
   Select,
@@ -39,6 +41,7 @@ export {
   getButtonStyles,
   getCardContentStyles,
   getCardStyles,
+  getCheckboxStyles,
   getErrorStyles,
   getHeadingStyles,
   getInputStyles,

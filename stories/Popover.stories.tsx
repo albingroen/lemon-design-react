@@ -18,11 +18,7 @@ const Template: Story<PopoverProps> = (args) => (
 export const Default = Template.bind({});
 
 Default.args = {
-  children: (
-    <Button size="small" icon={<PlusIcon className="w-4" />}>
-      Create company
-    </Button>
-  ),
+  children: <Button icon={<PlusIcon className="w-4" />}>Create company</Button>,
   align: "start",
   content: (
     <Stack direction="vertical" spacing="large">

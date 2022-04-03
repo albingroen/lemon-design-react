@@ -11,7 +11,7 @@ const meta: Meta = {
 export default meta;
 
 const Template: Story<ModalProps> = (args) => {
-  const [open, setOpen] = useState<boolean>(true);
+  const [open, setOpen] = useState<boolean>(false);
 
   return (
     <>

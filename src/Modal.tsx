@@ -77,7 +77,7 @@ export default function Modal({
                     className="!p-1 !h-auto !border-none !shadow-none !rounded group"
                     size="small"
                   >
-                    <XIcon className="w-4 text-gray-500 group-hover:text-inherit transition" />
+                    <XIcon className="w-5 text-gray-500 group-hover:text-inherit transition" />
                   </Button>
                 </Close>
               )}

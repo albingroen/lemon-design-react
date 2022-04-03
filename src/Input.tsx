@@ -38,8 +38,8 @@ export default function Input({
       {label && (
         <Typography.Label
           required={rest.required}
+          htmlFor={rest.id}
           className="mb-1"
-          id={rest.id}
         >
           {label}
         </Typography.Label>

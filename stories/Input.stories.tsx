@@ -18,5 +18,6 @@ Default.args = {
   label: "Email",
   block: false,
   type: "text",
+  id: "email",
   error: "",
 };

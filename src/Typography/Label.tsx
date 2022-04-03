@@ -1,4 +1,4 @@
-import React, { DetailedHTMLProps, HTMLAttributes } from "react";
+import React, { DetailedHTMLProps, LabelHTMLAttributes } from "react";
 import classNames from "../lib/classNames";
 
 export interface CustomLabelProps {
@@ -6,7 +6,10 @@ export interface CustomLabelProps {
 }
 
 export interface LabelProps
-  extends DetailedHTMLProps<HTMLAttributes<HTMLLabelElement>, HTMLLabelElement>,
+  extends DetailedHTMLProps<
+      LabelHTMLAttributes<HTMLLabelElement>,
+      HTMLLabelElement
+    >,
     CustomLabelProps {}
 
 export function getLabelStyles() {

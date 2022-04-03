@@ -10,6 +10,7 @@ import Typography, {
   getParagraphStyles,
 } from "./Typography";
 import { Card, getCardStyles, CardContent, getCardContentStyles } from "./Card";
+import Tag, { getTagStyles } from "./Tag";
 
 export {
   Button,
@@ -19,6 +20,7 @@ export {
   LinkButton,
   Select,
   Spinner,
+  Tag,
   Typography,
   getButtonStyles,
   getCardContentStyles,
@@ -30,4 +32,5 @@ export {
   getParagraphStyles,
   getSelectStyles,
   getSpinnerStyles,
+  getTagStyles,
 };

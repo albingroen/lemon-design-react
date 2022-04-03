@@ -12,6 +12,7 @@ import Typography, {
 } from "./Typography";
 import { Avatar, getAvatarStyles } from "./Avatar";
 import { Card, getCardStyles, CardContent, getCardContentStyles } from "./Card";
+import Stack, { getStackStyles } from "./Stack";
 
 export {
   Avatar,
@@ -22,6 +23,7 @@ export {
   LinkButton,
   Select,
   Spinner,
+  Stack,
   Tag,
   Typography,
   getAvatarStyles,
@@ -35,5 +37,6 @@ export {
   getParagraphStyles,
   getSelectStyles,
   getSpinnerStyles,
+  getStackStyles,
   getTagStyles,
 };

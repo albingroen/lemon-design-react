@@ -1,7 +1,7 @@
 {
   "name": "lemon-design-react",
   "description": "A React component library based on Tailwind CSS",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",

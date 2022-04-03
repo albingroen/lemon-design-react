@@ -1,4 +1,9 @@
-import React, { DetailedHTMLProps, HTMLAttributes } from "react";
+import React, {
+  DetailedHTMLProps,
+  forwardRef,
+  HTMLAttributes,
+  Ref,
+} from "react";
 import Spinner from "./Spinner";
 import classNames from "./lib/classNames";
 import { CustomButtonProps, getButtonStyles } from "./Button";
@@ -10,21 +15,25 @@ export interface LinkButtonProps
     >,
     CustomButtonProps {}
 
-export default function LinkButton({
-  iconPosition,
-  className,
-  children,
-  variant,
-  loading,
-  shape,
-  block,
-  size,
-  icon,
-  ...rest
-}: LinkButtonProps) {
+function LinkButton(
+  {
+    iconPosition,
+    className,
+    children,
+    variant,
+    loading,
+    shape,
+    block,
+    size,
+    icon,
+    ...rest
+  }: LinkButtonProps,
+  ref: Ref<HTMLAnchorElement>
+) {
   return (
     <a
       {...rest}
+      ref={ref}
       className={classNames(
         getButtonStyles({
           iconPosition,
@@ -48,3 +57,5 @@ export default function LinkButton({
     </a>
   );
 }
+
+export default forwardRef(LinkButton);

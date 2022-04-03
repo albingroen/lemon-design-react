@@ -15,4 +15,5 @@ Default.args = {
   description: "You agree to the terms & services when signing up",
   label: "I agree to the terms & services",
   id: "agreements",
+  required: false,
 };

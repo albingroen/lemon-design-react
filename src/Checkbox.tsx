@@ -39,7 +39,10 @@ export default function Checkbox({
 
       {label && (
         <Stack direction="vertical" spacing="mini">
-          <Typography.Label htmlFor={rest.id}>{label}</Typography.Label>
+          <Typography.Label htmlFor={rest.id} required={rest.required}>
+            {label}
+          </Typography.Label>
+
           {description && (
             <Typography.Paragraph className="!text-xs" dim>
               {description}

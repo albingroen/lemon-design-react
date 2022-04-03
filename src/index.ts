@@ -1,3 +1,4 @@
+import Alert, { getAlertStyles } from "./Alert";
 import Button, { getButtonStyles } from "./Button";
 import Checkbox, { getCheckboxStyles } from "./Checkbox";
 import Input, { getInputStyles } from "./Input";
@@ -24,6 +25,7 @@ import { Card, getCardStyles, CardContent, getCardContentStyles } from "./Card";
 import Popover, { getPopoverStyles } from "./Popover";
 
 export {
+  Alert,
   Avatar,
   AvatarGroup,
   Button,
@@ -40,6 +42,7 @@ export {
   Tag,
   Tooltip,
   Typography,
+  getAlertStyles,
   getAvatarGroupStyles,
   getAvatarStyles,
   getButtonStyles,

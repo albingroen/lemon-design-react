@@ -21,6 +21,7 @@ import {
   getAvatarGroupStyles,
 } from "./Avatar";
 import { Card, getCardStyles, CardContent, getCardContentStyles } from "./Card";
+import Popover, { getPopoverStyles } from "./Popover";
 
 export {
   Avatar,
@@ -32,6 +33,7 @@ export {
   Input,
   LinkButton,
   Modal,
+  Popover,
   Select,
   Spinner,
   Stack,
@@ -51,6 +53,7 @@ export {
   getModalContentStyles,
   getModalOverlayStyles,
   getParagraphStyles,
+  getPopoverStyles,
   getSelectStyles,
   getSpinnerStyles,
   getStackStyles,

@@ -31,7 +31,7 @@ export function getModalOverlayStyles() {
 
 export function getModalContentStyles() {
   const modalContentStyles = {
-    base: "bg-white w-full max-w-md rounded-lg fixed divide-y left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2",
+    base: "bg-white w-full max-w-md rounded-lg fixed divide-y left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 focus:outline-none",
   };
 
   return classNames(modalContentStyles.base);

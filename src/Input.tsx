@@ -47,6 +47,7 @@ export default function Input({
 
       <input
         {...rest}
+        type={rest.type ?? "text"}
         className={classNames(getInputStyles({ label, block }), className)}
       />
 

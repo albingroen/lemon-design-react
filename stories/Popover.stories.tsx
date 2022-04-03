@@ -11,7 +11,9 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<PopoverProps> = (args) => <Popover {...args}></Popover>;
+const Template: Story<PopoverProps> = (args) => (
+  <Popover className="w-72" {...args}></Popover>
+);
 
 export const Default = Template.bind({});
 
@@ -24,7 +26,13 @@ Default.args = {
   align: "start",
   content: (
     <Stack direction="vertical" spacing="large">
-      <Input id="name" label="Company name" placeholder="Acme INC" required />
+      <Input
+        placeholder="Acme INC"
+        label="Company name"
+        id="name"
+        required
+        block
+      />
       <Button
         size="small"
         variant="primary"

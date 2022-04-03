@@ -4,7 +4,7 @@ import classNames from "../lib/classNames";
 type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
 
 export interface CustomHeadingProps {
-  level: HeadingLevel;
+  level?: HeadingLevel;
 }
 
 export interface HeadingProps
@@ -14,7 +14,7 @@ export interface HeadingProps
     >,
     CustomHeadingProps {}
 
-function getElement(level: HeadingLevel) {
+function getElement(level: HeadingLevel = 1) {
   switch (level) {
     case 1:
       return "h1";

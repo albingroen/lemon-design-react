@@ -7,6 +7,7 @@ import Modal, { getModalOverlayStyles, getModalContentStyles } from "./Modal";
 import Select, { getSelectStyles } from "./Select";
 import Spinner, { getSpinnerStyles } from "./Spinner";
 import Stack, { getStackStyles } from "./Stack";
+import Table, { getTableStyles } from "./Table";
 import Tag, { getTagStyles } from "./Tag";
 import Tooltip from "./Tooltip";
 import Typography, {
@@ -39,6 +40,7 @@ export {
   Select,
   Spinner,
   Stack,
+  Table,
   Tag,
   Tooltip,
   Typography,
@@ -60,5 +62,6 @@ export {
   getSelectStyles,
   getSpinnerStyles,
   getStackStyles,
+  getTableStyles,
   getTagStyles,
 };

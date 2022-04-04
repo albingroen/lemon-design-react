@@ -1,13 +1,12 @@
-import * as DialogPrimitives from "@radix-ui/react-dialog";
 import Button from "./Button";
-import React, { ReactNode } from "react";
+import React, { Fragment, ReactNode, useState } from "react";
 import Stack from "./Stack";
 import Typography from "./Typography";
 import classNames from "./lib/classNames";
+import { Dialog, Transition } from "@headlessui/react";
 import { XIcon } from "@heroicons/react/outline";
 
-const { Root, Portal, Overlay, Title, Description, Close, Content } =
-  DialogPrimitives;
+const { Overlay, Title, Description } = Dialog;
 
 export interface CustomModalProps {
   children?: ReactNode | (({ onClose }: { onClose?: () => void }) => ReactNode);
@@ -46,63 +45,86 @@ export default function Modal({
   onClose,
   heading,
 }: ModalProps) {
+  const [open, setOpen] = useState<boolean>(true);
+
+  function handleClose() {
+    if (!onClose) return;
+
+    setOpen(false);
+    setTimeout(() => {
+      onClose();
+    }, 150);
+  }
+
   return (
-    <Root
-      onOpenChange={(open) => {
-        if (!open && onClose) {
-          onClose();
-        }
-      }}
-      open
-    >
-      <Portal>
-        <Overlay
-          className={classNames(getModalOverlayStyles(), overlayClassName)}
-        />
-
-        <Content
-          className={classNames(getModalContentStyles(), contentClassName)}
+    <Transition appear show={open} as={Fragment}>
+      <Dialog onClose={handleClose} open>
+        <Transition.Child
+          as={Fragment}
+          enter="ease-out duration-200"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="ease-in duration-100"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
         >
-          {heading && (
-            <Stack className="px-4 py-3.5" align="center" justify="between">
-              {heading && (
-                <Title asChild>
-                  <Typography.Heading level={3}>{heading}</Typography.Heading>
-                </Title>
-              )}
+          <Overlay
+            className={classNames(getModalOverlayStyles(), overlayClassName)}
+          />
+        </Transition.Child>
 
-              {showCloseButton && (
-                <Close asChild>
+        <Transition.Child
+          as={Fragment}
+          enter="ease-out duration-200"
+          enterFrom="opacity-0 scale-95"
+          enterTo="opacity-100 scale-100"
+          leave="ease-in duration-100"
+          leaveFrom="opacity-100 scale-100"
+          leaveTo="opacity-0 scale-95"
+        >
+          <div
+            className={classNames(getModalContentStyles(), contentClassName)}
+          >
+            {heading && (
+              <Stack className="px-4 py-3.5" align="center" justify="between">
+                {heading && (
+                  <Title as={Fragment}>
+                    <Typography.Heading level={3}>{heading}</Typography.Heading>
+                  </Title>
+                )}
+
+                {showCloseButton && (
                   <Button
                     className="!p-1 !h-auto !border-none !shadow-none !rounded group"
+                    onClick={handleClose}
                     size="small"
                   >
                     <XIcon className="w-5 text-gray-500 group-hover:text-inherit transition" />
                   </Button>
-                </Close>
-              )}
-            </Stack>
-          )}
-
-          <Stack
-            direction="vertical"
-            spacing="large"
-            className="p-5"
-            align="start"
-          >
-            {description && (
-              <Description asChild>
-                <Typography.Paragraph dim>{description}</Typography.Paragraph>
-              </Description>
+                )}
+              </Stack>
             )}
 
-            {children &&
-              (typeof children === "function"
-                ? children({ onClose })
-                : children)}
-          </Stack>
-        </Content>
-      </Portal>
-    </Root>
+            <Stack
+              direction="vertical"
+              spacing="large"
+              className="p-5"
+              align="start"
+            >
+              {description && (
+                <Description as={Fragment}>
+                  <Typography.Paragraph dim>{description}</Typography.Paragraph>
+                </Description>
+              )}
+
+              {children &&
+                (typeof children === "function"
+                  ? children({ onClose: handleClose })
+                  : children)}
+            </Stack>
+          </div>
+        </Transition.Child>
+      </Dialog>
+    </Transition>
   );
 }

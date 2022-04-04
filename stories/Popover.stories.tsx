@@ -12,19 +12,20 @@ const meta: Meta = {
 export default meta;
 
 const Template: Story<PopoverProps> = (args) => (
-  <Popover className="w-72" {...args}></Popover>
+  <Popover panelClassName="w-80" {...args} />
 );
 
 export const Default = Template.bind({});
 
 Default.args = {
-  children: <Button icon={<PlusIcon className="w-4" />}>Create company</Button>,
   align: "start",
+  children: <Button icon={<PlusIcon className="w-4" />}>Create company</Button>,
   content: (
     <Stack direction="vertical" spacing="large">
       <Input
         placeholder="Acme INC"
         label="Company name"
+        autoFocus
         id="name"
         required
         block

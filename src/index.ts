@@ -4,6 +4,7 @@ import Checkbox, { getCheckboxStyles } from "./Checkbox";
 import Empty, { getEmptyStyles } from "./Empty";
 import Input, { getInputStyles } from "./Input";
 import LinkButton from "./LinkButton";
+import Menu, { getMenuStyles, MenuItem, getMenuItemStyles } from "./Menu";
 import Modal, { getModalOverlayStyles, getModalContentStyles } from "./Modal";
 import Popover, { getPopoverStyles } from "./Popover";
 import Progress, { getProgressStyles } from "./Progress";
@@ -38,6 +39,8 @@ export {
   Empty,
   Input,
   LinkButton,
+  Menu,
+  MenuItem,
   Modal,
   Popover,
   Progress,
@@ -60,6 +63,8 @@ export {
   getHeadingStyles,
   getInputStyles,
   getLabelStyles,
+  getMenuItemStyles,
+  getMenuStyles,
   getModalContentStyles,
   getModalOverlayStyles,
   getParagraphStyles,

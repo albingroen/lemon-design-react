@@ -41,12 +41,12 @@ export function getAlertIcon(variant: AlertVariant = "info") {
 
 export function getAlertStyles(variant: AlertVariant = "info") {
   const alertStyles = {
-    base: "p-4 rounded-lg border relative",
+    base: "p-4 rounded-lg relative",
     variant: {
-      info: "bg-indigo-100 border-indigo-200 text-indigo-700",
-      warning: "bg-yellow-100 border-yellow-300 text-yellow-700",
-      success: "bg-green-100 border-green-200 text-green-700",
-      danger: "bg-red-100 border-red-200 text-red-700",
+      warning: "bg-yellow-100 text-yellow-700",
+      success: "bg-green-100 text-green-700",
+      info: "bg-indigo-100 text-indigo-700",
+      danger: "bg-red-100 text-red-700",
     },
   };
 

@@ -1,6 +1,7 @@
 import Alert, { getAlertStyles } from "./Alert";
 import Button, { getButtonStyles } from "./Button";
 import Checkbox, { getCheckboxStyles } from "./Checkbox";
+import Empty, { getEmptyStyles } from "./Empty";
 import Input, { getInputStyles } from "./Input";
 import LinkButton from "./LinkButton";
 import Modal, { getModalOverlayStyles, getModalContentStyles } from "./Modal";
@@ -34,6 +35,7 @@ export {
   Card,
   CardContent,
   Checkbox,
+  Empty,
   Input,
   LinkButton,
   Modal,
@@ -53,6 +55,7 @@ export {
   getCardContentStyles,
   getCardStyles,
   getCheckboxStyles,
+  getEmptyStyles,
   getErrorStyles,
   getHeadingStyles,
   getInputStyles,

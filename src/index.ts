@@ -4,6 +4,8 @@ import Checkbox, { getCheckboxStyles } from "./Checkbox";
 import Input, { getInputStyles } from "./Input";
 import LinkButton from "./LinkButton";
 import Modal, { getModalOverlayStyles, getModalContentStyles } from "./Modal";
+import Popover, { getPopoverStyles } from "./Popover";
+import Progress, { getProgressStyles } from "./Progress";
 import Select, { getSelectStyles } from "./Select";
 import Spinner, { getSpinnerStyles } from "./Spinner";
 import Stack, { getStackStyles } from "./Stack";
@@ -23,7 +25,6 @@ import {
   getAvatarGroupStyles,
 } from "./Avatar";
 import { Card, getCardStyles, CardContent, getCardContentStyles } from "./Card";
-import Popover, { getPopoverStyles } from "./Popover";
 
 export {
   Alert,
@@ -37,6 +38,7 @@ export {
   LinkButton,
   Modal,
   Popover,
+  Progress,
   Select,
   Spinner,
   Stack,
@@ -59,6 +61,7 @@ export {
   getModalOverlayStyles,
   getParagraphStyles,
   getPopoverStyles,
+  getProgressStyles,
   getSelectStyles,
   getSpinnerStyles,
   getStackStyles,

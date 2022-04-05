@@ -7,6 +7,7 @@ import LinkButton from "./LinkButton";
 import Modal from "./Modal";
 import Popover from "./Popover";
 import Progress from "./Progress";
+import Rating from "./Rating";
 import Select from "./Select";
 import Spinner from "./Spinner";
 import Stack from "./Stack";
@@ -14,9 +15,9 @@ import Table from "./Table";
 import Tag from "./Tag";
 import Tooltip from "./Tooltip";
 import Typography from "./Typography";
-import { Menu, MenuItem } from "./Menu";
 import { Avatar, AvatarGroup } from "./Avatar";
 import { Card, CardContent } from "./Card";
+import { Menu, MenuItem } from "./Menu";
 
 export {
   Alert,
@@ -34,6 +35,7 @@ export {
   Modal,
   Popover,
   Progress,
+  Rating,
   Select,
   Spinner,
   Stack,

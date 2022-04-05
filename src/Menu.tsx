@@ -36,8 +36,8 @@ export interface MenuItemProps
 export function getMenuItemStyles(active: boolean = false) {
   const menuItemStyles = {
     base: "border-l-4 px-3 py-2.5 hover:bg-gray-50 transition",
+    active: "border-l-indigo-500 font-medium",
     inactive: "border-l-transparent",
-    active: "border-l-indigo-500",
   };
 
   return classNames(

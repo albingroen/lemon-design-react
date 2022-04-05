@@ -1,32 +1,22 @@
-import Alert, { getAlertStyles } from "./Alert";
-import Button, { getButtonStyles } from "./Button";
-import Checkbox, { getCheckboxStyles } from "./Checkbox";
-import Empty, { getEmptyStyles } from "./Empty";
-import Input, { getInputStyles } from "./Input";
+import Alert from "./Alert";
+import Button from "./Button";
+import Checkbox from "./Checkbox";
+import Empty from "./Empty";
+import Input from "./Input";
 import LinkButton from "./LinkButton";
-import Menu, { getMenuStyles, MenuItem, getMenuItemStyles } from "./Menu";
-import Modal, { getModalOverlayStyles, getModalContentStyles } from "./Modal";
-import Popover, { getPopoverStyles } from "./Popover";
-import Progress, { getProgressStyles } from "./Progress";
-import Select, { getSelectStyles } from "./Select";
-import Spinner, { getSpinnerStyles } from "./Spinner";
-import Stack, { getStackStyles } from "./Stack";
-import Table, { getTableStyles } from "./Table";
-import Tag, { getTagStyles } from "./Tag";
+import Modal from "./Modal";
+import Popover from "./Popover";
+import Progress from "./Progress";
+import Select from "./Select";
+import Spinner from "./Spinner";
+import Stack from "./Stack";
+import Table from "./Table";
+import Tag from "./Tag";
 import Tooltip from "./Tooltip";
-import Typography, {
-  getErrorStyles,
-  getHeadingStyles,
-  getLabelStyles,
-  getParagraphStyles,
-} from "./Typography";
-import {
-  Avatar,
-  getAvatarStyles,
-  AvatarGroup,
-  getAvatarGroupStyles,
-} from "./Avatar";
-import { Card, getCardStyles, CardContent, getCardContentStyles } from "./Card";
+import Typography from "./Typography";
+import { Menu, MenuItem } from "./Menu";
+import { Avatar, AvatarGroup } from "./Avatar";
+import { Card, CardContent } from "./Card";
 
 export {
   Alert,
@@ -51,28 +41,4 @@ export {
   Tag,
   Tooltip,
   Typography,
-  getAlertStyles,
-  getAvatarGroupStyles,
-  getAvatarStyles,
-  getButtonStyles,
-  getCardContentStyles,
-  getCardStyles,
-  getCheckboxStyles,
-  getEmptyStyles,
-  getErrorStyles,
-  getHeadingStyles,
-  getInputStyles,
-  getLabelStyles,
-  getMenuItemStyles,
-  getMenuStyles,
-  getModalContentStyles,
-  getModalOverlayStyles,
-  getParagraphStyles,
-  getPopoverStyles,
-  getProgressStyles,
-  getSelectStyles,
-  getSpinnerStyles,
-  getStackStyles,
-  getTableStyles,
-  getTagStyles,
 };

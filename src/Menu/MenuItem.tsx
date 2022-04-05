@@ -1,30 +1,6 @@
 import React, { DetailedHTMLProps, HTMLAttributes } from "react";
-import classNames from "./lib/classNames";
-import { Card, CardProps } from "./Card";
+import classNames from "../lib/classNames";
 
-// Menu
-
-export interface CustomMenuProps {}
-
-export interface MenuProps extends CardProps, CustomMenuProps {}
-
-export function getMenuStyles() {
-  const menuStyles = {
-    base: "overflow-hidden divide-y",
-  };
-
-  return classNames(menuStyles.base);
-}
-
-function Menu({ className, children, ...rest }: MenuProps) {
-  return (
-    <Card {...rest} className={classNames(getMenuStyles(), className)}>
-      {children}
-    </Card>
-  );
-}
-
-// Menu Item
 export interface CustomMenuItemProps {
   active?: boolean;
 }
@@ -46,7 +22,7 @@ export function getMenuItemStyles(active: boolean = false) {
   );
 }
 
-export function MenuItem({
+export default function MenuItem({
   className,
   children,
   active,
@@ -58,7 +34,3 @@ export function MenuItem({
     </div>
   );
 }
-
-Menu.Item = MenuItem;
-
-export default Menu;

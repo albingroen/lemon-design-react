@@ -1,3 +1,4 @@
+import AvatarGroup from "./AvatarGroup";
 import React, { DetailedHTMLProps, ImgHTMLAttributes } from "react";
 import classNames from "../lib/classNames";
 
@@ -13,10 +14,6 @@ export interface AvatarProps
     CustomAvatarProps {}
 
 export function getAvatarStyles({ size = "default" }: CustomAvatarProps) {
-  console.log({
-    size,
-  });
-
   const avatarStyles = {
     base: "inline-block rounded-full",
     size: {
@@ -29,7 +26,7 @@ export function getAvatarStyles({ size = "default" }: CustomAvatarProps) {
   return classNames(avatarStyles.base, avatarStyles.size[size]);
 }
 
-export default function Avatar({ className, size, ...rest }: AvatarProps) {
+function Avatar({ className, size, ...rest }: AvatarProps) {
   return (
     <img
       {...rest}
@@ -37,3 +34,7 @@ export default function Avatar({ className, size, ...rest }: AvatarProps) {
     />
   );
 }
+
+Avatar.Group = AvatarGroup;
+
+export default Avatar;

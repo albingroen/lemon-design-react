@@ -1,4 +1,4 @@
-import Menu, { MenuProps } from "../src/Menu";
+import Menu, { MenuProps } from "../src/Menu/Menu";
 import { Meta, Story } from "@storybook/react";
 import { useState } from "react";
 

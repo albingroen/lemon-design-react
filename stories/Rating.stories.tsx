@@ -18,5 +18,4 @@ export const Default = Template.bind({});
 
 Default.args = {
   size: "default",
-  value: 3,
 };

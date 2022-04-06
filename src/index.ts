@@ -11,6 +11,7 @@ import Rating from "./Rating";
 import Select from "./Select";
 import Spinner from "./Spinner";
 import Stack from "./Stack";
+import Switch from "./Switch";
 import Table from "./Table";
 import Tag from "./Tag";
 import Tooltip from "./Tooltip";
@@ -39,6 +40,7 @@ export {
   Select,
   Spinner,
   Stack,
+  Switch,
   Table,
   Tag,
   Tooltip,

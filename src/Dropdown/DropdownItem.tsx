@@ -28,7 +28,7 @@ export function DropdownItemButton({
   ...rest
 }: DropdownItemButtonProps) {
   return (
-    <MenuPrimitives.Item>
+    <MenuPrimitives.Item disabled={rest.disabled}>
       {({ active }) => (
         <button
           {...rest}
@@ -50,14 +50,23 @@ export interface DropdownItemLinkProps
       AnchorHTMLAttributes<HTMLAnchorElement>,
       HTMLAnchorElement
     >,
-    CustomDropdownItemProps {}
+    CustomDropdownItemProps {
+  disabled?: boolean;
+}
 
 export function DropdownItemLink(
-  { variant, children, className, icon, ...rest }: DropdownItemLinkProps,
+  {
+    className,
+    children,
+    disabled,
+    variant,
+    icon,
+    ...rest
+  }: DropdownItemLinkProps,
   ref: Ref<HTMLAnchorElement>
 ) {
   return (
-    <MenuPrimitives.Item>
+    <MenuPrimitives.Item disabled={disabled}>
       {({ active }) => (
         <a
           {...rest}

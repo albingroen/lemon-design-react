@@ -18,6 +18,7 @@ import Tooltip from "./Tooltip";
 import Typography from "./Typography";
 import { Avatar, AvatarGroup } from "./Avatar";
 import { Card, CardContent } from "./Card";
+import { Dropdown, DropdownItemButton, DropdownItemLink } from "./Dropdown";
 import { Menu, MenuItem } from "./Menu";
 
 export {
@@ -28,6 +29,9 @@ export {
   Card,
   CardContent,
   Checkbox,
+  Dropdown,
+  DropdownItemButton,
+  DropdownItemLink,
   Empty,
   Input,
   LinkButton,

@@ -14,6 +14,7 @@ import Spinner from "./Spinner";
 import Stack from "./Stack";
 import Switch from "./Switch";
 import Table from "./Table";
+import Tabs, { Tab } from "./Tabs";
 import Tag from "./Tag";
 import Tooltip from "./Tooltip";
 import Typography from "./Typography";
@@ -47,7 +48,9 @@ export {
   Spinner,
   Stack,
   Switch,
+  Tab,
   Table,
+  Tabs,
   Tag,
   Tooltip,
   Typography,

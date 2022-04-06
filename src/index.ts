@@ -1,6 +1,7 @@
 import Alert from "./Alert";
 import Button from "./Button";
 import Checkbox from "./Checkbox";
+import Divider from "./Divider";
 import Empty from "./Empty";
 import Input from "./Input";
 import LinkButton from "./LinkButton";
@@ -29,6 +30,7 @@ export {
   Card,
   CardContent,
   Checkbox,
+  Divider,
   Dropdown,
   DropdownItemButton,
   DropdownItemLink,

@@ -41,7 +41,7 @@ export default function Table({
 }: TableProps) {
   return (
     <table {...rest} className={classNames(getTableStyles(), className)}>
-      <thead className="bg-gray-50">
+      <thead>
         <tr>
           {columns.map((column, columnIndex) => {
             const isLast = columnIndex === columns.length - 1;
@@ -51,7 +51,7 @@ export default function Table({
               <th
                 scope="col"
                 className={classNames(
-                  "py-3.5 pl-6 pr-3 text-left text-sm font-semibold text-gray-900",
+                  "py-3.5 pl-6 pr-3 text-left text-sm font-semibold text-gray-900 bg-gray-50",
                   isFirst && "rounded-tl-lg",
                   isLast && "rounded-tr-lg"
                 )}
@@ -63,7 +63,7 @@ export default function Table({
         </tr>
       </thead>
 
-      <tbody className="divide-y divide-gray-200 bg-white">
+      <tbody className="divide-y divide-gray-200">
         {rows.map((row, rowIndex) => {
           const isRowLast = rowIndex === rows.length - 1;
 
@@ -79,7 +79,7 @@ export default function Table({
                 return (
                   <td
                     className={classNames(
-                      "py-4 pl-6 pr-3 text-sm font-medium text-gray-900",
+                      "py-4 pl-6 pr-3 text-sm font-medium text-gray-900 bg-white",
                       isRowLast && isColumnFirst && "rounded-bl-lg",
                       isRowLast && isColumnLast && "rounded-br-lg"
                     )}

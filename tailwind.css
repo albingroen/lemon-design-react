@@ -14,4 +14,12 @@
   .avatar-group .avatar-small {
     @apply bg-white ring-white ring-1;
   }
+
+  .sidebar-groups > *:not(:first-child) {
+    @apply pt-3;
+  }
+
+  .sidebar-groups > *:not(:last-child) {
+    @apply pb-3;
+  }
 }

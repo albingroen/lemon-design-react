@@ -22,6 +22,12 @@ import { Avatar, AvatarGroup } from "./Avatar";
 import { Card, CardContent } from "./Card";
 import { Dropdown, DropdownItemButton, DropdownItemLink } from "./Dropdown";
 import { Menu, MenuItem } from "./Menu";
+import {
+  SidebarItemButton,
+  SidebarItemLink,
+  SidebarItemGroup,
+  Sidebar,
+} from "./Sidebar";
 
 export {
   Alert,
@@ -45,6 +51,10 @@ export {
   Progress,
   Rating,
   Select,
+  Sidebar,
+  SidebarItemButton,
+  SidebarItemGroup,
+  SidebarItemLink,
   Spinner,
   Stack,
   Switch,

@@ -10,6 +10,13 @@ import {
   SupportIcon,
   ViewGridIcon,
 } from "@heroicons/react/outline";
+import {
+  OfficeBuildingIcon as OfficeBuildingIconSolid,
+  ViewGridIcon as ViewGridIconSolid,
+  HomeIcon as HomeIconSolid,
+  CogIcon as CogIconSolid,
+} from "@heroicons/react/solid";
+import { useState } from "react";
 
 const meta: Meta = {
   title: "Sidebar",
@@ -17,11 +24,66 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<SidebarProps> = (args) => (
-  <div className="flex h-[94vh] bg-gray-100 border">
-    <Sidebar {...args} />
-  </div>
-);
+const SIDEBAR_ITEMS = [
+  {
+    label: "Start",
+    items: [
+      {
+        activeIcon: HomeIconSolid,
+        icon: HomeIcon,
+        label: "Home",
+      },
+      {
+        activeIcon: ViewGridIconSolid,
+        icon: ViewGridIcon,
+        label: "Projects",
+      },
+    ],
+  },
+  {
+    label: "Management",
+    items: [
+      {
+        activeIcon: CogIconSolid,
+        icon: CogIcon,
+        label: "Settings",
+      },
+      {
+        activeIcon: OfficeBuildingIconSolid,
+        icon: OfficeBuildingIcon,
+        label: "Organization",
+      },
+    ],
+  },
+];
+
+const Template: Story<SidebarProps> = (args) => {
+  const [item, setItem] = useState<string>("Home");
+
+  return (
+    <div className="flex h-[94vh] bg-gray-100 border">
+      <Sidebar {...args}>
+        {SIDEBAR_ITEMS.map((items) => (
+          <Sidebar.Group heading={items.label} key={items.label}>
+            {items.items.map((ITEM) => (
+              <Sidebar.ItemButton
+                onClick={() => {
+                  setItem(ITEM.label);
+                }}
+                activeIcon={<ITEM.activeIcon className="w-5 text-gray-500" />}
+                icon={<ITEM.icon className="w-5 text-gray-500" />}
+                active={ITEM.label === item}
+                key={ITEM.label}
+              >
+                {ITEM.label}
+              </Sidebar.ItemButton>
+            ))}
+          </Sidebar.Group>
+        ))}
+      </Sidebar>
+    </div>
+  );
+};
 
 export const Default = Template.bind({});
 
@@ -32,41 +94,12 @@ Default.args = {
       <Input placeholder="Search" className="bg-gray-50" block />
     </Stack>
   ),
-  children: (
-    <>
-      <Sidebar.Group heading="Start">
-        <Sidebar.ItemLink icon={<HomeIcon className="w-5 h-5 text-gray-500" />}>
-          Home
-        </Sidebar.ItemLink>
-        <Sidebar.ItemLink
-          icon={<ViewGridIcon className="w-5 h-5 text-gray-500" />}
-        >
-          Projects
-        </Sidebar.ItemLink>
-      </Sidebar.Group>
-
-      <Sidebar.Group heading="Management">
-        <Sidebar.ItemLink icon={<CogIcon className="w-5 h-5 text-gray-500" />}>
-          Settings
-        </Sidebar.ItemLink>
-        <Sidebar.ItemLink
-          icon={<OfficeBuildingIcon className="w-5 h-5 text-gray-500" />}
-        >
-          Organization
-        </Sidebar.ItemLink>
-      </Sidebar.Group>
-    </>
-  ),
   footer: (
     <Sidebar.Group>
-      <Sidebar.ItemButton
-        icon={<LogoutIcon className="w-5 h-5 text-gray-500" />}
-      >
+      <Sidebar.ItemButton icon={<LogoutIcon className="w-5 text-gray-500" />}>
         Log out
       </Sidebar.ItemButton>
-      <Sidebar.ItemButton
-        icon={<SupportIcon className="w-5 h-5 text-gray-500" />}
-      >
+      <Sidebar.ItemButton icon={<SupportIcon className="w-5 text-gray-500" />}>
         Help
       </Sidebar.ItemButton>
     </Sidebar.Group>

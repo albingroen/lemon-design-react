@@ -5,11 +5,11 @@ import { Popover as PopoverPrimitive, Transition } from "@headlessui/react";
 export type PopoverAlign = "left" | "center" | "right";
 
 export interface PopoverProps {
+  content: ({ onClose }: { onClose: () => void }) => ReactNode;
   wrapperClassName?: string;
   panelClassName?: string;
   align?: PopoverAlign;
   children: ReactNode;
-  content: ReactNode;
 }
 
 export function getPopoverStyles(align: PopoverAlign = "left") {
@@ -49,7 +49,9 @@ export default function Popover({
         <PopoverPrimitive.Panel
           className={classNames(getPopoverStyles(align), panelClassName)}
         >
-          {content}
+          {typeof content === "function"
+            ? ({ close }) => content({ onClose: close })
+            : content}
         </PopoverPrimitive.Panel>
       </Transition>
     </PopoverPrimitive>

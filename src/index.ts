@@ -1,11 +1,13 @@
 import Alert from "./Alert";
 import Button from "./Button";
 import Checkbox from "./Checkbox";
+import DatePicker from "./DatePicker";
 import Divider from "./Divider";
 import Empty from "./Empty";
 import Input from "./Input";
 import LinkButton from "./LinkButton";
 import Modal from "./Modal";
+import Navbar from "./Navbar";
 import Popover from "./Popover";
 import Progress from "./Progress";
 import Rating from "./Rating";
@@ -28,7 +30,6 @@ import {
   SidebarItemGroup,
   Sidebar,
 } from "./Sidebar";
-import Navbar from "./Navbar";
 
 export {
   Alert,
@@ -38,6 +39,7 @@ export {
   Card,
   CardContent,
   Checkbox,
+  DatePicker,
   Divider,
   Dropdown,
   DropdownItemButton,

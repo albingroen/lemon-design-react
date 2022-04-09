@@ -20,23 +20,26 @@ export const Default = Template.bind({});
 Default.args = {
   align: "start",
   children: <Button icon={<PlusIcon className="w-4" />}>Create company</Button>,
-  content: (
-    <Stack direction="vertical" spacing="large">
-      <Input
-        placeholder="Acme INC"
-        label="Company name"
-        autoFocus
-        id="name"
-        required
-        block
-      />
-      <Button
-        size="small"
-        variant="primary"
-        icon={<OfficeBuildingIcon className="w-3" />}
-      >
-        Create company
-      </Button>
-    </Stack>
-  ),
+  content: ({ onClose }) => {
+    return (
+      <Stack direction="vertical" spacing="large">
+        <Input
+          placeholder="Acme INC"
+          label="Company name"
+          autoFocus
+          id="name"
+          required
+          block
+        />
+        <Button
+          size="small"
+          variant="primary"
+          icon={<OfficeBuildingIcon className="w-3" />}
+          onClick={onClose}
+        >
+          Create company
+        </Button>
+      </Stack>
+    );
+  },
 };

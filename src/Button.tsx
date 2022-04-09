@@ -109,7 +109,7 @@ function Button(
       {iconPosition === "left" &&
         (loading ? <Spinner size="small" /> : icon && <span>{icon}</span>)}
 
-      <span>{children}</span>
+      {children && <span>{children}</span>}
 
       {iconPosition === "right" &&
         (loading ? <Spinner size="small" /> : icon && <span>{icon}</span>)}

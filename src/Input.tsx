@@ -1,4 +1,9 @@
-import React, { DetailedHTMLProps, InputHTMLAttributes } from "react";
+import React, {
+  DetailedHTMLProps,
+  forwardRef,
+  InputHTMLAttributes,
+  Ref,
+} from "react";
 import Typography from "./Typography";
 import classNames from "./lib/classNames";
 
@@ -25,14 +30,10 @@ export function getInputStyles({ block }: CustomInputProps) {
   return classNames(inputStyles.base, block && inputStyles.block);
 }
 
-export default function Input({
-  description,
-  className,
-  error,
-  block,
-  label,
-  ...rest
-}: InputProps) {
+function Input(
+  { description, className, error, block, label, ...rest }: InputProps,
+  ref: Ref<HTMLInputElement>
+) {
   return (
     <div>
       {label && (
@@ -47,6 +48,7 @@ export default function Input({
 
       <input
         {...rest}
+        ref={ref}
         type={rest.type ?? "text"}
         className={classNames(getInputStyles({ label, block }), className)}
       />
@@ -65,3 +67,5 @@ export default function Input({
     </div>
   );
 }
+
+export default forwardRef(Input);

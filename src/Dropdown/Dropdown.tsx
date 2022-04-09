@@ -28,7 +28,7 @@ function Dropdown({ align = "right", children, trigger }: DropdownProps) {
       >
         <MenuPrimitives.Items
           className={classNames(
-            "absolute w-56 mt-2 bg-white divide-y divide-gray-200 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none",
+            "absolute w-56 mt-2 bg-white divide-y divide-gray-200 rounded-lg shadow-lg shadow-gray-300/40 ring-1 ring-black ring-opacity-5 focus:outline-none",
             {
               center: "origin-center left-1/2 transform -translate-x-1/2",
               right: "origin-top-right right-0",

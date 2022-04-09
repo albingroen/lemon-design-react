@@ -2,9 +2,10 @@ import React, { DetailedHTMLProps, HTMLAttributes } from "react";
 import classNames from "./lib/classNames";
 
 export interface CustomStackProps {
-  spacing?: "mini" | "small" | "default" | "large" | "huge";
+  spacing?: "none" | "px" | "mini" | "small" | "default" | "large" | "huge";
   align?: "stretch" | "center" | "start" | "end" | "baseline";
   direction?: "vertical" | "horizontal";
+  wrap?: boolean;
   justify?:
     | "between"
     | "stretch"
@@ -24,15 +25,19 @@ export function getStackStyles({
   justify = "stretch",
   spacing = "default",
   align = "stretch",
+  wrap = false,
 }: CustomStackProps) {
   const stackStyles = {
     base: "flex",
+    wrap: "flex-wrap",
     spacing: {
       default: "gap-3",
       huge: "gap-5",
       large: "gap-4",
       mini: "gap-1",
       small: "gap-2",
+      none: "gap-0",
+      px: "gap-px",
     },
     justify: {
       between: "justify-between",
@@ -61,7 +66,8 @@ export function getStackStyles({
     stackStyles.direction[direction],
     stackStyles.spacing[spacing],
     stackStyles.justify[justify],
-    stackStyles.align[align]
+    stackStyles.align[align],
+    wrap && stackStyles.wrap
   );
 }
 
@@ -71,13 +77,14 @@ export default function Stack({
   align = "stretch",
   children,
   spacing,
+  wrap,
   ...rest
 }: StackProps) {
   return (
     <div
       {...rest}
       className={classNames(
-        getStackStyles({ direction, spacing, align, justify }),
+        getStackStyles({ direction, spacing, align, justify, wrap }),
         rest.className
       )}
     >

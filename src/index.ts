@@ -28,6 +28,7 @@ import {
   SidebarItemGroup,
   Sidebar,
 } from "./Sidebar";
+import Navbar from "./Navbar";
 
 export {
   Alert,
@@ -47,6 +48,7 @@ export {
   Menu,
   MenuItem,
   Modal,
+  Navbar,
   Popover,
   Progress,
   Rating,

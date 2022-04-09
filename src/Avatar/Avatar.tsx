@@ -17,9 +17,9 @@ export function getAvatarStyles({ size = "default" }: CustomAvatarProps) {
   const avatarStyles = {
     base: "inline-block rounded-full",
     size: {
-      default: "h-10 w-10 avatar-default",
+      default: "h-9 w-9 avatar-default",
       large: "h-14 w-14 avatar-large",
-      small: "h-8 w-8 avatar-small",
+      small: "h-6 w-6 avatar-small",
     },
   };
 

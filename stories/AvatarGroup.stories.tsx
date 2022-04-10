@@ -15,9 +15,9 @@ export const Default = Template.bind({});
 Default.args = {
   children: (
     <>
-      <Avatar size="small" src="https://i.pravatar.cc/300" />
-      <Avatar size="small" src="https://i.pravatar.cc/300" />
-      <Avatar size="small" src="https://i.pravatar.cc/300" />
+      <Avatar src="https://i.pravatar.cc/300" />
+      <Avatar src="https://i.pravatar.cc/300" />
+      <Avatar src="https://i.pravatar.cc/300" />
     </>
   ),
 };

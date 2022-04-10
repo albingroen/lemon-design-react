@@ -4,9 +4,9 @@ import React, {
   useEffect,
   useRef,
 } from "react";
+import Stack from "./Stack";
 import Typography from "./Typography";
 import classNames from "./lib/classNames";
-import Stack from "./Stack";
 
 export interface CustomSliderProps {
   labels?: string[];
@@ -59,11 +59,18 @@ export default function Slider({ className, labels, ...rest }: SliderProps) {
       {labels?.length ? (
         <Stack align="center" justify="between">
           {labels.map((label) => (
-            <div key={label} className="flex items-center justify-center w-3">
+            <Stack
+              key={label}
+              className="w-3"
+              align="center"
+              direction="vertical"
+              spacing="mini"
+            >
+              <div className="h-2 w-px bg-gray-400" />
               <Typography.Paragraph className="!text-sm text-center" dim>
                 {label}
               </Typography.Paragraph>
-            </div>
+            </Stack>
           ))}
         </Stack>
       ) : null}

@@ -3,6 +3,7 @@ import Button from "./Button";
 import Checkbox from "./Checkbox";
 import DatePicker from "./DatePicker";
 import Divider from "./Divider";
+import Drawer from "./Drawer";
 import Empty from "./Empty";
 import Input from "./Input";
 import LinkButton from "./LinkButton";
@@ -41,6 +42,7 @@ export {
   Checkbox,
   DatePicker,
   Divider,
+  Drawer,
   Dropdown,
   DropdownItemButton,
   DropdownItemLink,

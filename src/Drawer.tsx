@@ -1,5 +1,5 @@
 import Button from "./Button";
-import React, { Fragment, ReactNode, useState } from "react";
+import React, { useState, Fragment, ReactNode } from "react";
 import Stack from "./Stack";
 import Typography from "./Typography";
 import classNames from "./lib/classNames";
@@ -8,7 +8,23 @@ import { XIcon } from "@heroicons/react/outline";
 
 const { Overlay, Title, Description } = Dialog;
 
-export interface CustomModalProps {
+export function getDrawerOverlayStyles() {
+  const drawerOverlayStyles = {
+    base: "bg-black bg-opacity-40 fixed inset-0",
+  };
+
+  return classNames(drawerOverlayStyles.base);
+}
+
+export function getDrawerContentStyles() {
+  const drawerContentStyles = {
+    base: "bg-white w-full max-w-md fixed divide-y top-0 right-0 bottom-0 focus:outline-none",
+  };
+
+  return classNames(drawerContentStyles.base);
+}
+
+export interface CustomDrawerProps {
   children?: ReactNode | (({ onClose }: { onClose?: () => void }) => ReactNode);
   overlayClassName?: string;
   contentClassName?: string;
@@ -18,33 +34,17 @@ export interface CustomModalProps {
   heading?: string;
 }
 
-export interface ModalProps extends CustomModalProps {}
+export interface DrawerProps extends CustomDrawerProps {}
 
-export function getModalOverlayStyles() {
-  const modalOverlayStyles = {
-    base: "bg-black bg-opacity-40 fixed inset-0",
-  };
-
-  return classNames(modalOverlayStyles.base);
-}
-
-export function getModalContentStyles() {
-  const modalContentStyles = {
-    base: "bg-white w-full max-w-md rounded-lg fixed divide-y left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 focus:outline-none",
-  };
-
-  return classNames(modalContentStyles.base);
-}
-
-export default function Modal({
+export default function Drawer({
   showCloseButton = true,
   overlayClassName,
   contentClassName,
   description,
+  heading,
   children,
   onClose,
-  heading,
-}: ModalProps) {
+}: DrawerProps) {
   const [open, setOpen] = useState<boolean>(true);
 
   function handleClose() {
@@ -53,7 +53,7 @@ export default function Modal({
     setOpen(false);
     setTimeout(() => {
       onClose();
-    }, 200);
+    }, 300);
   }
 
   return (
@@ -61,29 +61,29 @@ export default function Modal({
       <Dialog onClose={handleClose} open>
         <Transition.Child
           as={Fragment}
-          enter="ease-out duration-200"
+          enter="ease-out duration-300"
           enterFrom="opacity-0"
           enterTo="opacity-100"
-          leave="ease-in duration-100"
+          leave="ease-in duration-150"
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
           <Overlay
-            className={classNames(getModalOverlayStyles(), overlayClassName)}
+            className={classNames(getDrawerOverlayStyles(), overlayClassName)}
           />
         </Transition.Child>
 
         <Transition.Child
           as={Fragment}
-          enter="ease-out duration-200"
-          enterFrom="opacity-0 scale-95"
-          enterTo="opacity-100 scale-100"
-          leave="ease-in duration-100"
-          leaveFrom="opacity-100 scale-100"
-          leaveTo="opacity-0 scale-95"
+          enterFrom="opacity-0 translate-x-[400px]"
+          leaveTo="opacity-0 translate-x-[400px]"
+          leaveFrom="opacity-100 translate-x-0"
+          enterTo="opacity-100 translate-x-0"
+          enter="ease-out duration-300"
+          leave="ease-in duration-200"
         >
           <div
-            className={classNames(getModalContentStyles(), contentClassName)}
+            className={classNames(getDrawerContentStyles(), contentClassName)}
           >
             {heading && (
               <Stack className="px-4 py-3.5" align="center" justify="between">

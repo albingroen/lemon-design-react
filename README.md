@@ -2,7 +2,7 @@
 
 A React component library based on Tailwind CSS
 
-**🚧 Under development**
+**Beta**
 
 [View components here →](https://main--624787b9a7abe6004a647008.chromatic.com)
 

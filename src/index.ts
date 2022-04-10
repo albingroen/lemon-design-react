@@ -5,6 +5,7 @@ import DatePicker from "./DatePicker";
 import Divider from "./Divider";
 import Drawer from "./Drawer";
 import Empty from "./Empty";
+import Grid from "./Grid";
 import Input from "./Input";
 import LinkButton from "./LinkButton";
 import Modal from "./Modal";
@@ -49,6 +50,7 @@ export {
   DropdownItemButton,
   DropdownItemLink,
   Empty,
+  Grid,
   Input,
   LinkButton,
   Menu,
@@ -64,9 +66,9 @@ export {
   SidebarItemButton,
   SidebarItemGroup,
   SidebarItemLink,
+  Slider,
   Spinner,
   Stack,
-  Slider,
   Switch,
   Tab,
   Table,

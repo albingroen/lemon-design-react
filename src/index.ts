@@ -9,10 +9,12 @@ import Input from "./Input";
 import LinkButton from "./LinkButton";
 import Modal from "./Modal";
 import Navbar from "./Navbar";
+import Pagination from "./Pagination";
 import Popover from "./Popover";
 import Progress from "./Progress";
 import Rating from "./Rating";
 import Select from "./Select";
+import Slider from "./Slider";
 import Spinner from "./Spinner";
 import Stack from "./Stack";
 import Switch from "./Switch";
@@ -31,7 +33,6 @@ import {
   SidebarItemGroup,
   Sidebar,
 } from "./Sidebar";
-import Slider from "./Slider";
 
 export {
   Alert,
@@ -54,6 +55,7 @@ export {
   MenuItem,
   Modal,
   Navbar,
+  Pagination,
   Popover,
   Progress,
   Rating,

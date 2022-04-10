@@ -31,6 +31,7 @@ import {
   SidebarItemGroup,
   Sidebar,
 } from "./Sidebar";
+import Slider from "./Slider";
 
 export {
   Alert,
@@ -63,6 +64,7 @@ export {
   SidebarItemLink,
   Spinner,
   Stack,
+  Slider,
   Switch,
   Tab,
   Table,

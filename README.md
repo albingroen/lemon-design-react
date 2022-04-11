@@ -35,7 +35,7 @@ Since we have some custom classes for components like the `AvatarGroup` and
 `Sidebar`, you need to import this style sheet in the root of your project.
 
 ```javascript
-import "./node_modules/lemon-design-react/dist/lemon.css";
+import "lemon-design-react/dist/lemon.css";
 ```
 
 #### Form plugin

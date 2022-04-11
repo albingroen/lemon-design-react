@@ -1,4 +1,4 @@
-# Lemon Design (React)
+# 🍋 Lemon Design
 
 A React component library based on Tailwind CSS
 

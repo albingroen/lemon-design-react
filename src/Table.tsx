@@ -5,7 +5,7 @@ import React, {
 } from "react";
 import classNames from "./lib/classNames";
 
-export type TableRow = Record<string, unknown>;
+export type TableRow = Record<string, any>;
 
 export interface TableColumn {
   renderItem?: (row: TableRow) => ReactNode;
@@ -79,7 +79,7 @@ export default function Table({
                 return (
                   <td
                     className={classNames(
-                      "py-4 pl-6 pr-3 text-sm font-medium text-gray-900 bg-white",
+                      "py-4 pl-6 pr-3 text-sm text-gray-900 bg-white",
                       isRowLast && isColumnFirst && "rounded-bl-lg",
                       isRowLast && isColumnLast && "rounded-br-lg"
                     )}

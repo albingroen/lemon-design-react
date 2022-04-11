@@ -51,7 +51,7 @@ export default function Table({
               <th
                 scope="col"
                 className={classNames(
-                  "py-3.5 pl-6 pr-3 text-left text-sm font-semibold text-gray-900 bg-gray-50",
+                  "py-3.5 pl-6 pr-3 text-left text-sm font-medium text-gray-900 bg-gray-50",
                   isFirst && "rounded-tl-lg",
                   isLast && "rounded-tr-lg"
                 )}

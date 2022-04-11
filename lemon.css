@@ -1,0 +1,55 @@
+.avatar-group .avatar-large {
+  @apply bg-white ring-white ring-4;
+}
+
+.avatar-group .avatar-default {
+  @apply bg-white ring-white ring-2;
+}
+
+.avatar-group .avatar-small {
+  @apply bg-white ring-white ring-1;
+}
+
+.sidebar-groups > *:not(:first-child) {
+  @apply pt-3;
+}
+
+.sidebar-groups > *:not(:last-child) {
+  @apply pb-3;
+}
+
+.slider,
+.slider::-webkit-slider-runnable-track,
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+.slider::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, #838cf1, #838cf1), #e5e7eb;
+  background-size: var(--background-size, 0%) 100%;
+  background-repeat: no-repeat;
+
+  @apply rounded-full h-1;
+}
+
+.slider-thumb {
+  @apply shadow-sm -mt-[4px] rounded-full bg-indigo-400 cursor-pointer h-3 w-3 ring-2 ring-white border-none transition transform hover:bg-indigo-500 active:bg-indigo-500 hover:scale-110 active:scale-110;
+}
+
+.slider::-webkit-slider-thumb {
+  @apply slider-thumb;
+}
+
+/** FF*/
+
+.slider::-moz-range-progress {
+  @apply bg-indigo-400 rounded-full h-1;
+}
+
+.slider::-moz-range-track {
+  @apply bg-gray-200 rounded-full h-1;
+}
+
+.slider::-moz-range-thumb {
+  @apply slider-thumb;
+}

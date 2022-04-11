@@ -13,7 +13,7 @@
     "node": ">=10"
   },
   "scripts": {
-    "build-tailwind": "NODE_ENV=production npx tailwindcss -i tailwind.css -o ./dist/tailwind.css --minify",
+    "build-tailwind": "NODE_ENV=production npx tailwindcss -i lemon.css -o ./dist/lemon.css --minify",
     "build": "tsdx build && npm run build-tailwind",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",

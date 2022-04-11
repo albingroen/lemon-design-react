@@ -14,10 +14,13 @@ Install through the package manager of your choice
 npm install lemon-design-react
 ```
 
-Import the CSS file in the root of your project
+Add the follow to your `tailwind.config.js`
 
 ```javascript
-import "lemon-design-react/dist/tailwind.css";
+content: [
+  ...,
+  "./node_modules/lemon-design-react/src/**/*.tsx",
+],
 ```
 
 Start using the components

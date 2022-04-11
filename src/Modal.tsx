@@ -30,7 +30,7 @@ export function getModalOverlayStyles() {
 
 export function getModalContentStyles() {
   const modalContentStyles = {
-    base: "bg-white w-full max-w-md rounded-lg fixed divide-y left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 focus:outline-none",
+    base: "bg-white w-full max-w-md rounded-lg fixed divide-y left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 focus:outline-none max-h-[90vh] flex flex-col",
   };
 
   return classNames(modalContentStyles.base);
@@ -106,9 +106,9 @@ export default function Modal({
             )}
 
             <Stack
+              className="p-5 flex-1 overflow-y-auto"
               direction="vertical"
               spacing="large"
-              className="p-5"
               align="start"
             >
               {description && (
